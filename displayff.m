@@ -18,7 +18,7 @@ end
 
 %编队导航期间每时刻的ff值
 ff=[];
-SNL_target = LaplaceMatrix([0.5 2.0;0.5 1.0; 1.5 1.0; 1.5 2.0],true);
+SNL_target = LaplaceMatrix([o1(1,1:2);o2(1,1:2);o3(1,1:2);o4(1,1:2)],true);
 for t = 1:length(o1)  
     x1=o1(t,1);
     y1=o1(t,2);

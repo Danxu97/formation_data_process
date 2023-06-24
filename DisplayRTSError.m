@@ -6,9 +6,7 @@ sx0 = 0;
 sy0 = 0;
 %编队导航期间每时刻的ff值
 error=[];
-% 目标点
-target_point=[0.5 2.0;0.5 1.0; 1.5 1.0; 1.5 2.0];
-initial_params = [tx0; ty0; theta0;sx0;sy0]; % 平移参数和旋转角度
+
 %% 加载轨迹
 teb1 = load([load_path,'traj1.txt']);
 teb2 = load([load_path,'traj2.txt']);
@@ -26,6 +24,9 @@ for t = 0:0.2:max(times)
     [x3,y3,yaw3] = getStfromTraj(teb3,t);o3(end+1,:)=[x3,y3,yaw3];
     [x4,y4,yaw4] = getStfromTraj(teb4,t);o4(end+1,:)=[x4,y4,yaw4];
 end
+% 目标点
+target_point=[o1(1,1:2);o2(1,1:2);o3(1,1:2);o4(1,1:2)];
+initial_params = [tx0; ty0; theta0;sx0;sy0]; % 平移参数和旋转角度
 
 
 for t = 1:length(o1)  

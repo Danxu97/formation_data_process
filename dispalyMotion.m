@@ -3,8 +3,8 @@
 % close all;
 %load data
 % 加载地图、路径、轨迹
-displayGif = false;
-% displayGif = true;
+% displayGif = false;
+displayGif = true;
 
 map = load([load_path,'map.txt']);
 
@@ -62,7 +62,7 @@ for t = 0:0.2:max(times)
     line([o1(end,1).*20, o2(end,1).*20],[o1(end,2).*20, o2(end,2).*20],'color',[1-t/max(times),1-t/max(times),1-t/max(times)],'LineStyle','--');%1-2
     line([o2(end,1).*20, o3(end,1).*20],[o2(end,2).*20, o3(end,2).*20],'color',[1-t/max(times),1-t/max(times),1-t/max(times)],'LineStyle','--');%2-3
     line([o3(end,1).*20, o4(end,1).*20],[o3(end,2).*20, o4(end,2).*20],'color',[1-t/max(times),1-t/max(times),1-t/max(times)],'LineStyle','--');%3-4
-    line([o4(end,1).*20, o1(end,1).*20],[o4(end,2).*20, o1(end,2).*20],'color',[1-t/max(times),1-t/max(times),1-t/max(times)],'LineStyle','--');%4-1
+    %line([o4(end,1).*20, o1(end,1).*20],[o4(end,2).*20, o1(end,2).*20],'color',[1-t/max(times),1-t/max(times),1-t/max(times)],'LineStyle','--');%4-1
     %hold on;    
     if(displayGif)
         drawnow
