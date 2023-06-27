@@ -1,7 +1,7 @@
 %% 加载数据的路径
 load_path = './data/';
 %% 保存实验数据的路径
-save_path = './0exps/exp24/';
+save_path = './0exps/exp33/';
 mkdir(save_path);
 %% 关闭现有图窗
 close all;
